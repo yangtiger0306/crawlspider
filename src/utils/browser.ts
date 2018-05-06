@@ -4,6 +4,7 @@ let browser: puppeteer.Browser;
 export async function getBrowser(): Promise<puppeteer.Browser> {
   let opts: puppeteer.LaunchOptions = {
     headless: true,
+      args:['--no-sandbox']
   };
   browser = browser || await puppeteer.launch(opts);
   return browser;
