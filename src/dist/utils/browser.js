@@ -14,6 +14,7 @@ function getBrowser() {
     return __awaiter(this, void 0, void 0, function* () {
         let opts = {
             headless: true,
+            args: ['--no-sandbox']
         };
         browser = browser || (yield puppeteer.launch(opts));
         return browser;
